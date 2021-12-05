@@ -47,7 +47,7 @@ function showSolution(){
 	//chose a random bird picture
 	birdFileName = bird.nameLatin.replace(/ /g,"_").toLowerCase();
 	var i = Math.floor(Math.random()*3);
-	newImg.src = `/v1.1/pics/${birdFileName}${i}.jpg`;
+	newImg.src = `/pics/${birdFileName}${i}.jpg`;
 
 }
 
@@ -101,7 +101,7 @@ function refresh() {
 	//set a placeholder image
 	_img = document.getElementById('img1');
 	newImg = new Image;
-	newImg.src = '/v1.1/pics/fragezeichen.jpg';
+	newImg.src = '/pics/fragezeichen.jpg';
 	newImg.onload = function() {
     	_img.src = this.src;
 	}
