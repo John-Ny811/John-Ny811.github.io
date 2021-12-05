@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="stylesheet" href="/mystyle.css">
+      <link rel="stylesheet" href="/v1.2/mystyle.css">
         <title>Vogelquiz</title>
     </head>
     <body>
 
 
-        <span id="main" >
-          <p><img src="/pics/fragezeichen.jpg" width="500" id="img1" alt="Welcher Vogel ist hier zu hören?"></p>
+        <div id="main" >
+          <p><img src="/v1.1/pics/fragezeichen.jpg" width="500" id="img1" alt="Welcher Vogel ist hier zu hören?"></p>
           <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
           <script src="Url-List.js"></script>
           <script src="main.js"></script>
@@ -21,34 +21,53 @@
             </p>
           </div>
 
-          <p>
-          <button onclick="showSolution()">Lösung anzeigen</button>
-          <button onclick="refresh()">Nächste</button>
 
+
+
+          <div id="inputField">
+
+            <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)"/>
+            <button type="button" onclick="getInput()">Abschicken</button>
+
+            <datalist id="dliste">
+              <option value="Kohlmeise">
+              <option value="Haussperling">
+              <option value="Blaumeise">
+              <option value="Feldsperling">
+              <option value="Amsel">
+              <option value="Elster">
+              <option value="Grünfink">
+              <option value="Buchfink">
+              <option value="Rabenkrähe">
+              <option value="Ringeltaube">
+          	</datalist>
+
+          	<div>
+              <br>
+              <h2>
+          		<p id="solution"></p>
+              </h2>
+              <h3>
+              <br>
+              <p id="solutionText"></p><br>
+          		<p id="birdnameGerman"></p>
+          		<p id="birdnameLatin" class="italic"></p>
+            </h3>
+          	</div>
+
+          </div>
+
+
+          <div id="solutionButtonBox">
+            <p>
+            <button onclick="showSolution()">Lösung anzeigen</button>
+            <button onclick="refresh()">Nächste<br> -->></button>
           </p>
 
-          <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)"/>
-          <button type="button" onclick="getInput()">Abschicken</button>
+          </div>
 
-          <datalist id="dliste">
-            <option value="Kohlmeise">
-            <option value="Haussperling">
-            <option value="Blaumeise">
-            <option value="Feldsperling">
-            <option value="Amsel">
-            <option value="Elster">
-            <option value="Grünfink">
-            <option value="Buchfink">
-            <option value="Rabenkrähe">
-            <option value="Ringeltaube">
-        	</datalist>
 
-        	<div>
-        		<p id="solution"></p>
-        		<p id="birdnameGerman"></p>
-        		<p id="birdnameLatin" class="italic"></p>
-        	</div>
-      </span>
+      </div>
 
 
     </body>

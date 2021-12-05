@@ -33,7 +33,7 @@ function playSound(a_button) {
     stopSound(buttonSound1);
     stopSound(buttonSound2);
     stopSound(buttonSound3);
-   
+
     a_button.play();
 }
 
@@ -43,12 +43,12 @@ function showSolution(){
 	//display the name of the chosen bird in German and Latin
 	document.getElementById("birdnameGerman").innerHTML = bird.nameGerman;
 	document.getElementById("birdnameLatin").innerHTML = bird.nameLatin;
-	
+
 	//chose a random bird picture
 	birdFileName = bird.nameLatin.replace(/ /g,"_").toLowerCase();
 	var i = Math.floor(Math.random()*3);
-	newImg.src = `/pics/${birdFileName}${i}.jpg`;
-	
+	newImg.src = `/v1.1/pics/${birdFileName}${i}.jpg`;
+
 }
 
 // testSolution is called when user makes a guess
@@ -56,10 +56,12 @@ function testSolution(solution) {
 	  if (solution == bird.nameLatin || solution == bird.nameGerman) {
             	document.getElementById("solution").innerHTML = "Richtige Lösung";
             } else {
-                document.getElementById("solution").innerHTML = "Leider Falsch"; 
+                document.getElementById("solution").innerHTML = "Leider Falsch";
+                document.getElementById("solutionText").innerHTML = "Die richtige Antwort lautet:";
+
             }
          }
-	
+
 //the main function
 function refresh() {
 
@@ -70,23 +72,23 @@ function refresh() {
     stopSound(buttonSound2);
     stopSound(buttonSound3);
     }
-    
+
     //set all the solution fields to an empty String again
-    
+
     if (document.getElementById("birdnameGerman") && document.getElementById("birdnameLatin")) {
-    
+
     	document.getElementById("birdnameGerman").innerHTML = "";
 		document.getElementById("birdnameLatin").innerHTML = "";
-		
+
 	}
 	if (document.getElementById("solution")) {
 		document.getElementById("solution").innerHTML = "";
 	}
-	
+
 	if (document.getElementById("textfield1")) {
 		document.getElementById("textfield1").value ="";
-	}	
-    
+	}
+
     //create Bird-Object - so far Bird only has the properties nameLatin and nameGerman
 	bird = new Object();
 
@@ -95,16 +97,16 @@ function refresh() {
 	let randBird = ListOfBirds[num];
 	bird.nameLatin =  BirdNamesLatin[num];
 	bird.nameGerman = BirdNamesGerman[num];
-	
+
 	//set a placeholder image
 	_img = document.getElementById('img1');
 	newImg = new Image;
-	newImg.src = '/pics/fragezeichen.jpg';
+	newImg.src = '/v1.1/pics/fragezeichen.jpg';
 	newImg.onload = function() {
     	_img.src = this.src;
 	}
-	
-	
+
+
 
 	//choose 3 random Sounds for the chosen Bird
 	let randomSounds = [];
@@ -114,7 +116,7 @@ function refresh() {
   		var birdSound = randBird[randNum];
   		//console.log('In While')
   		//check if sound was already chosen -> if not then add sound to the list of the three sounds (called randomSounds)
-  		
+
   		if (!(randomSounds.includes(birdSound))){
     		randomSounds.push(birdSound);
   		}
@@ -127,16 +129,16 @@ function refresh() {
 
 //search is used when user presses enter
 function search(ele) {
-   
+
    	if(event.key === 'Enter') {
          testSolution(ele.value);
-         showSolution();  
+         showSolution();
 		}
 }
 
-//getInput is used when user clicks "abschicken"	
+//getInput is used when user clicks "abschicken"
 function getInput() {
-	 
+
 	 var inputVal = document.getElementById("textfield1").value;
 	 testSolution(inputVal);
 	 showSolution();
@@ -150,27 +152,25 @@ function getInput() {
 
 //liefert eine Liste von Urls, die JSON-Datei muss lokal gespeichert sein??, zu finden auf Xeno
 
-/*    
+/*
     $.getJSON("columba-palumbus.json", function(data) {
     console.log('test');
-    	$.each(data.recordings, function(key, val) { 
+    	$.each(data.recordings, function(key, val) {
     	console.log(val["file"]);
     	// do some String-replacement so its easier to copy the whole thing
     	let string_mod = val['file'];
     	string_mod = string_mod.replace('//', "'https://");
     	string_mod = string_mod.replace('download', "download',");
-    	
-    	
+
+
     	$("p").append(string_mod);
     	$("p").append("<br>");
-    	
-    
+
+
     	var Beispiel = val["file-name"];
-    	
+
     	});
     });
 
 
 */
-
-

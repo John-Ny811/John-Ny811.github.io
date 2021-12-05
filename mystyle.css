@@ -78,13 +78,104 @@ div#soundButtonBox button {
   transition: all 0.2s;
 }
 
-div#soundButtonBox button:hover{
- background-color:#4095c6;
+div#soundButtonBox button:hover {
+  background-color:#4095c6;
 }
 
 @media all and (max-width:30em){
  div#soundButtonBox button{
   display:block;
   margin:0.2em auto;
+ }
+}
+
+div#inputField {
+  position: relative;
+
+  width: 150em;
+
+  margin-top: 1em;
+  margin-bottom: 3em;
+  margin-left: 5em;
+}
+
+div#inputField input{
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  padding: 12px;
+  border-radius: 3px;
+  border-top: 20px solid transparent;
+
+  font-size: 14px;
+  border: 0;
+  margin-right: 2em
+}
+
+div#inputField button{
+  width: 7em;
+  margin-left:1em;
+  margin-right: 1em;
+  padding:0.3em 1.2em;
+  border-radius:0.5em;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  font-size: 16px;
+  color:#FFFFFF;
+  background-color:#a88932;
+  text-align:center;
+  transition: all 0.2s;
+}
+div#inputField button:hover {
+  background-color:#826923;
+}
+
+@media all and (max-width:30em){
+  div#inputField button{
+  display:block;
+  margin:0.2em auto;
+ }
+}
+
+div#solutionButtonBox {
+  position: relative;
+  width: 150em;
+  margin-top: 5em;
+  margin-bottom: 3em;
+  margin-left: -1em;
+}
+
+div#solutionButtonBox button{
+  width: 7em;
+  margin-left:5em;
+  margin-right: 4em;
+  padding:0.3em 1.2em;
+  border-radius:0.5em;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  font-size: 16px;
+  color:#FFFFFF;
+  background-color:#7a5c06;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+div#solutionButtonBox button:hover{
+  background-color:#574103;
+}
+
+@media all and (max-width:30em){
+  div#solutionButtonBox button{
+  display:block;
+  margin:0.2em auto;
  }
 }
