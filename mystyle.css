@@ -25,7 +25,7 @@ html {
 
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 10%;
   width: 100em;
   height: 300em;
   margin-left: -15em;
@@ -112,7 +112,7 @@ div#inputField input{
 
   font-size: 14px;
   border: 0;
-  margin-right: 2em
+  margin-right: 1em
 }
 
 div#inputField button{
@@ -146,14 +146,13 @@ div#inputField button:hover {
 div#solutionButtonBox {
   position: relative;
   width: 150em;
-  margin-top: 5em;
   margin-bottom: 3em;
   margin-left: -1em;
 }
 
 div#solutionButtonBox button{
   width: 7em;
-  margin-left:5em;
+  margin-left:3em;
   margin-right: 4em;
   padding:0.3em 1.2em;
   border-radius:0.5em;
@@ -162,9 +161,9 @@ div#solutionButtonBox button{
   text-decoration:none;
   font-family:'Roboto',sans-serif;
   font-weight:300;
-  font-size: 16px;
+  font-size: 20px;
   color:#FFFFFF;
-  background-color:#7a5c06;
+  background-color:#747800;
   text-align:center;
   transition: all 0.2s;
 }

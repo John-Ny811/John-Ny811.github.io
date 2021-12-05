@@ -101,7 +101,7 @@ function refresh() {
 	//set a placeholder image
 	_img = document.getElementById('img1');
 	newImg = new Image;
-	newImg.src = '/pics/fragezeichen.jpg';
+	newImg.src = '/pics/placeholder.png';
 	newImg.onload = function() {
     	_img.src = this.src;
 	}
