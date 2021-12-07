@@ -20,6 +20,8 @@ html {
   font-style: italic;
 }
 
+/*
+
 .select-wrapper {
   position: relative;
   width: 10em;
@@ -42,10 +44,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  /* der folgende Aufruf nutzt Data-Uri -> hier werden die Bildinformationen eines kleinen Bildes wie ein Link zu einer externen Quelle
-  -> statt eine externe Bild-Datein lädt der Browser direkt die Bilddaten
-  --> uri-Generatoren sind online zu finden
-  */
+
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8nwYAAmoBZ0eMiB8AAAAASUVORK5CYII=) repeat;
   border: none;
   border-radius: 3px;
@@ -80,11 +79,11 @@ select:focus::-ms-value {
   width: 100em;
   height: 300em;
   margin-left: -15em;
-  /* -1/2 width */
+
   margin-top: -10px;
-  /* -1/2 height */
 
 
+*/
 
 }
 
