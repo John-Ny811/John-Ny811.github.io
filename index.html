@@ -2,9 +2,21 @@
 <html>
     <head>
       <link rel="stylesheet" href="/mystyle.css">
+
         <title>Vogelquiz</title>
     </head>
     <body>
+
+      <div class="container">
+
+
+        <div class="select-wrapper">
+          <label for="difficulty">Schwierigkeitsgrad:</label>
+          <select  id="difficulty" onChange="updateDiff()">
+            <option value="1">Sehr Einfach</option>
+            <option value="2">Einfach</option>
+          </select>
+        </div>
 
 
         <div id="main" >
@@ -27,7 +39,7 @@
 
 
 
-          <div id="inputField">
+          <div id="inputField" class="inputList">
 
             <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)"/>
             <button type="button" onclick="getInput()">Abschicken</button>

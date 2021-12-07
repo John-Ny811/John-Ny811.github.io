@@ -1,16 +1,29 @@
+
 // listOfBirds holds the constants as defined in Url-List.js
-let ListOfBirds = [parus_major,passer_domesticus,cyanistes_caeruleus,passer_montanus,turdus_merula,pica_pica,fringilla_coelebs,chloris_chloris,corvus_corone,columba_palumbus];
+let ListOfBirds = [parus_major,passer_domesticus,cyanistes_caeruleus,passer_montanus,turdus_merula,pica_pica,fringilla_coelebs,
+  chloris_chloris,corvus_corone,columba_palumbus];
 
-let BirdNamesLatin = ["Parus Major","Passer Domesticus","Cyanistes Caeruleus", "Passer Montanus","Turdus Merula", "Pica Pica","Fringilla Coelebs","Chloris Chloris","Corvus Corone","Columba Palumbus"];
+let ListOfBirdsMiddle = [dendrocopos_major, garrulus_glandarius, sylvia_borin, pyrrhula_pyrrhula, sitta_europaea,
+  cuculus_canorus, delichon_urbicum, apus_apus, streptopelia_decaocto, carduelis_carduelis]
 
-let BirdNamesGerman = ["Kohlmeise","Haussperling","Blaumeise", "Feldsperling","Amsel", "Elster","Buchfink","Grünfink","Rabenkrähe","Ringeltaube"];
+let BirdNamesLatin = ["Parus Major","Passer Domesticus","Cyanistes Caeruleus", "Passer Montanus","Turdus Merula",
+ "Pica Pica","Fringilla Coelebs","Chloris Chloris","Corvus Corone","Columba Palumbus", "Dendrocopos Major",
+ "Garrulus Glandarius", "Sylvia Borin", "Pyrrhula Pyrrhula", "Sitta Europaea", "Cuculus Canorus", "Delichon Urbicum",
+ "Apus Apus", "Streptopelia Decaocto", "Carduelis Carduelis"];
+
+let BirdNamesGerman = ["Kohlmeise","Haussperling","Blaumeise", "Feldsperling","Amsel", "Elster","Buchfink","Grünfink","Rabenkrähe","Ringeltaube",
+"Buntspecht", "Eichelhäher", "Gartengrasmücke", "Gimpel", "Kleiber", "Kuckuck", "Mehlschwalbe", "Mauersegler", "Türkentaube", "Stieglitz"];
 
 //MatchBirdNames ist ein Map wo jedem Lateinischen Namen die deutsche Entsprechung zugeordnet wird
 let MatchBirdNames = new Map();
 
+let diff = 1;
+
 for (let i=0; i < BirdNamesLatin.length;i++){
   MatchBirdNames.set(BirdNamesLatin[i], BirdNamesGerman[i]);
 }
+
+let diff_prev = 1;
 
 //declaring some variables
 var buttonSound1;
@@ -65,6 +78,9 @@ function testSolution(solution) {
 //the main function
 function refresh() {
 
+  updateDiff();
+
+
 
 	//stop any sound that is playing - it is wrapped in an if-clause so that there is no referenceError when refresh is loaded on startup
 	if (buttonSound1 && buttonSound2 && buttonSound3){
@@ -93,7 +109,7 @@ function refresh() {
 	bird = new Object();
 
 	//chose a random Bird from ListOfBirds
-	let num = Math.floor(Math.random() * 10);
+	let num = Math.floor(Math.random() * ListOfBirds.length);
 	let randBird = ListOfBirds[num];
 	bird.nameLatin =  BirdNamesLatin[num];
 	bird.nameGerman = BirdNamesGerman[num];
@@ -144,6 +160,27 @@ function getInput() {
 	 showSolution();
 }
 
+function updateDiff() {
+  var d = document.getElementById("difficulty");
+  diff = d.options[d.selectedIndex].value;
+
+  //if you want to get the text value: var myDiff_text = myDiff.options[d.selectedIndex].text;
+
+  console.log("difficulty value "+ diff)
+
+  if (diff == 2){
+
+    if (diff_prev == diff) {
+      return;
+    }
+    console.log("old length: " + ListOfBirds.length)
+    ListOfBirds = ListOfBirds.concat(ListOfBirdsMiddle)
+    console.log("new List :" + ListOfBirds.length)
+    diff_prev = diff;
+  }
+
+}
+
 
 
 
@@ -171,6 +208,4 @@ function getInput() {
 
     	});
     });
-
-
 */

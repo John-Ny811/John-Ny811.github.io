@@ -3,7 +3,6 @@
 
 
 
-
 body {
   background-color: rgb(226, 245, 181);
   color: #363636;
@@ -17,9 +16,61 @@ html {
   margin: auto;
 }
 
-  .italic {
-    font-style: italic;
-  }
+.italic {
+  font-style: italic;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 10em;
+  float: right;
+  margin-right: 10em;
+
+}
+
+.select-wrapper::before {
+  color: #fff;
+  font-size: 20px;
+  pointer-events: none;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+select {
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  /* der folgende Aufruf nutzt Data-Uri -> hier werden die Bildinformationen eines kleinen Bildes wie ein Link zu einer externen Quelle
+  -> statt eine externe Bild-Datein lädt der Browser direkt die Bilddaten
+  --> uri-Generatoren sind online zu finden
+  */
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8nwYAAmoBZ0eMiB8AAAAASUVORK5CYII=) repeat;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,.3);
+  color: #000;
+  cursor: pointer;
+
+  font-size: 16px;
+  height: 40px;
+  outline: none;
+  padding-left: 10px;
+  width: 100%;
+}
+
+select option {
+  color: #000;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus::-ms-value {
+  background-color: transparent;
+}
 
 #main {
 
@@ -45,6 +96,11 @@ html {
 
 #main * {
   margin: 0 auto;
+}
+
+div#difficulty {
+
+  width: 200px;
 }
 
 div#soundButtonBox {
@@ -115,6 +171,7 @@ div#inputField input{
   margin-right: 1em
 }
 
+
 div#inputField button{
   width: 7em;
   margin-left:1em;
@@ -132,6 +189,7 @@ div#inputField button{
   text-align:center;
   transition: all 0.2s;
 }
+
 div#inputField button:hover {
   background-color:#826923;
 }
