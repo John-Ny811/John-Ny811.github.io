@@ -33,7 +33,7 @@ var _img = document.getElementById('img1');
 var newImg = new Image;
 
 //refresh is the main-function and gets called when page is loaded and after user makes a guess or wants to see the next question
-refresh();
+window.onload = refresh();
 
 //stopSound takes a button as an input and stops the sound of this button
 function stopSound(a_button) {
@@ -84,7 +84,7 @@ function refresh() {
 
 	//stop any sound that is playing - it is wrapped in an if-clause so that there is no referenceError when refresh is loaded on startup
 	if (buttonSound1 && buttonSound2 && buttonSound3){
-	stopSound(buttonSound1);
+	  stopSound(buttonSound1);
     stopSound(buttonSound2);
     stopSound(buttonSound3);
     }
