@@ -110,6 +110,10 @@ function refresh() {
 		document.getElementById("textfield1").value ="";
 	}
 
+  if (document.getElementById("solutionText")) {
+    document.getElementById("solutionText").innerHTML = "";
+  }
+
     //create Bird-Object - so far Bird only has the properties nameLatin and nameGerman
 	bird = new Object();
 
