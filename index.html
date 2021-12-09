@@ -7,82 +7,67 @@
     </head>
     <body>
 
+      <div id="left">
+      </div>
 
-        <div class="select-wrapper">
-          <label for="difficulty">Schwierigkeitsgrad:</label>
-          <select  id="difficulty" onChange="updateDiff()">
-            <option value="1">Sehr Einfach</option>
-            <option value="2">Einfach</option>
-          </select>
-        </div>
+      <div id="middle-top"></div>
 
+      <div id="middle-main-1">
+        <h1> Welcher Vogel ist hier zu hören?</h1>
+        <p><img src="/pics/placeholder.png" width="500" id="img1" alt="Welcher Vogel ist hier zu hören?"></p>
+      </div>
 
-        <div id="main" >
-          <h1> Welcher Vogel ist hier zu hören?</h1>
-          <br>
-          <br>
-          <p><img src="/pics/placeholder.png" width="500" id="img1" alt="Welcher Vogel ist hier zu hören?"></p>
+      <div id="middle-main-2">
+            <div id="soundButtonBox">
+              <p>
+                <button onclick="playSound(buttonSound1)">Sound1</button>
+                <button onclick="playSound(buttonSound2)">Sound2</button>
+                <button onclick="playSound(buttonSound3)">Sound3</button>
+              </p>
+            </div>
 
-
-          <div id="soundButtonBox">
-            <p>
-              <button onclick="playSound(buttonSound1)">Sound1</button>
-              <button onclick="playSound(buttonSound2)">Sound2</button>
-              <button onclick="playSound(buttonSound3)">Sound3</button>
-            </p>
-          </div>
-
-
-
-
-          <div id="inputField" class="inputList">
-
-            <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)"/>
-            <button type="button" onclick="getInput()">Abschicken</button>
-
-            <datalist id="dliste">
-              <option value="Kohlmeise">
-              <option value="Haussperling">
-              <option value="Blaumeise">
-              <option value="Feldsperling">
-              <option value="Amsel">
-              <option value="Elster">
-              <option value="Grünfink">
-              <option value="Buchfink">
-              <option value="Rabenkrähe">
-              <option value="Ringeltaube">
-          	</datalist>
-
-          	<div>
-              <br>
-              <h2>
-          		<p id="solution"></p>
-              </h2>
-              <h3>
-              <br>
-              <p id="solutionText"></p><br>
-          		<p id="birdnameGerman"></p>
-          		<p id="birdnameLatin" class="italic"></p>
-            </h3>
-          	</div>
-
-          </div>
+            <div id="inputField" class="inputList">
+              <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)"/>
+              <button type="button" onclick="getInput()">Abschicken</button>
+              <datalist id="dliste">
+                <!-- values werden in main.js kreiert
+                <option value="Kohlmeise">
+                ...
+            	</datalist>
+            </div>
 
 
-          <div id="solutionButtonBox">
-            <p>
-            <button onclick="showSolution()">Lösung anzeigen</button>
-            <button onclick="refresh()">Nächste<br> -->></button>
-          </p>
-
-          </div>
-
+            <div id="solutionButtonBox">
+              <p>
+                <button onclick="refresh()">Nächste<br> -->></button>
+                <button onclick="showSolution()">Lösung anzeigen</button>
+              </p>
+            </div>
 
       </div>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-      <script src="Url-List.js"></script>
-      <script src="main.js"></script>
 
+      <div id="middle-main-3">
+          <h2>
+            <p id="solutionText"></p>
+          </h2>
+          <h2 style="text-align:center;" id="birdnameGerman"></h3>
+          <h2 style="text-align:center;" id="birdnameLatin" class="italic"></h3>
+      </div>
 
-    </body>
+    <div id="right">
+       <div class="select-wrapper">
+        <label for="difficulty">Schwierigkeitsgrad:</label>
+        <select  id="difficulty" onChange="updateDiff()">
+          <option value="1">Sehr Einfach</option>
+          <option value="2">Einfach</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="right"></div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="Url-List.js"></script>
+    <script src="main.js"></script>
+
+  </body>
 </html>
