@@ -3,6 +3,10 @@
 let ListOfBirds = [parus_major,passer_domesticus,cyanistes_caeruleus,passer_montanus,turdus_merula,pica_pica,fringilla_coelebs,
   chloris_chloris,corvus_corone,columba_palumbus];
 
+
+//used when changing difficulty from 2 back to 1
+let ListOfBirds_original = [...ListOfBirds]
+
 let ListOfBirdsMiddle = [dendrocopos_major, garrulus_glandarius, sylvia_borin, pyrrhula_pyrrhula, sitta_europaea,
   cuculus_canorus, delichon_urbicum, apus_apus, streptopelia_decaocto, carduelis_carduelis]
 
@@ -67,13 +71,16 @@ function showSolution(){
 // testSolution is called when user makes a guess
 function testSolution(solution) {
 	  if (solution == bird.nameLatin || solution == bird.nameGerman) {
-            	document.getElementById("solution").innerHTML = "Richtige Lösung";
+            	document.getElementById("solutionText").innerHTML = "Richtige Lösung";
             } else {
-                document.getElementById("solution").innerHTML = "Leider Falsch";
-                document.getElementById("solutionText").innerHTML = "Die richtige Antwort lautet:";
-
+                document.getElementById("solutionText").innerHTML = "Leider Falsch - die richtige Antwort lautet:";
             }
          }
+
+// updateAutocomplete is creating the list for the autocomplete-textinput
+// we don't call it from inside refresh() because it shouldn't be called everytime
+// on refresh, instead it only gets called when the difficulty is changed (=updateDiff())
+updateAutocomplete();
 
 //the main function
 function refresh() {
@@ -97,9 +104,7 @@ function refresh() {
 		document.getElementById("birdnameLatin").innerHTML = "";
 
 	}
-	if (document.getElementById("solution")) {
-		document.getElementById("solution").innerHTML = "";
-	}
+
 
 	if (document.getElementById("textfield1")) {
 		document.getElementById("textfield1").value ="";
@@ -121,8 +126,6 @@ function refresh() {
 	newImg.onload = function() {
     	_img.src = this.src;
 	}
-
-
 
 	//choose 3 random Sounds for the chosen Bird
 	let randomSounds = [];
@@ -167,6 +170,7 @@ function updateDiff() {
   //if you want to get the text value: var myDiff_text = myDiff.options[d.selectedIndex].text;
 
   console.log("difficulty value "+ diff)
+  console.log("previous diff "+diff_prev)
 
   if (diff == 2){
 
@@ -174,9 +178,42 @@ function updateDiff() {
       return;
     }
     console.log("old length: " + ListOfBirds.length)
+
     ListOfBirds = ListOfBirds.concat(ListOfBirdsMiddle)
     console.log("new List :" + ListOfBirds.length)
     diff_prev = diff;
+  }
+
+  if (diff == 1) {
+    if (diff_prev == diff) {
+      console.log("diff = prev so im returning")
+      return;
+    }
+    ListOfBirds = [...ListOfBirds_original];
+    console.log("set diff back - new List " + ListOfBirds.length)
+    diff_prev = diff;
+  }
+
+  updateAutocomplete();
+
+}
+
+
+
+function updateAutocomplete(){
+
+  //updating the autocomplete-textfield1
+  var dList = document.getElementById("dliste");
+  //remove all elements from autocomplete-textfield1
+  while (dList.firstChild) {
+    dList.removeChild(dList.lastChild);
+  }
+  //append the names to autocomplete-textfied
+  for (var i = 0; i < ListOfBirds.length; i++) {
+    var opt = document.createElement('option');
+    opt.value = BirdNamesGerman[i];
+    dList.appendChild(opt);
+    console.log("appended: "+opt.value)
   }
 
 }
