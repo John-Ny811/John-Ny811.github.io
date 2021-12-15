@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="stylesheet" href="/mystyle.css">
+      <!--this meta tag is needed so the media queries work in Chrome Device-Toolbar -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+      <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
+      <link rel="stylesheet" media="all" href="/mystyle.css">
+
 
         <title>Vogelquiz</title>
     </head>
     <body>
 
-      <div id="left">
+        <div id="top-box">
+          <div class="select-wrapper">
+           <label for="difficulty">Schwierigkeitsgrad:</label>
+           <select  id="difficulty" onChange="updateDiff()">
+             <option value="1">Sehr Einfach</option>
+             <option value="2">Einfach</option>
+           </select>
+         </div>
+
+         <span id="title"><h1> Welcher Vogel ist hier zu hören?</h1></span>
+
+       </div>
+      <div class="image-col">
+        <p>
+          <img src="/pics/placeholder.png" width="500" id="img1" alt="Welcher Vogel ist hier zu hören?"></img>
+        </p>
+        <p id="attribution"></p>
+
       </div>
 
-      <div id="middle-top"></div>
 
-      <div id="middle-main-1">
-        <h1> Welcher Vogel ist hier zu hören?</h1>
-        <p><img src="/pics/placeholder.png" width="500" id="img1" alt="Welcher Vogel ist hier zu hören?"></p>
-      </div>
-
-      <div id="middle-main-2">
             <div id="soundButtonBox">
-              <p>
-                <button onclick="playSound(buttonSound1)">Sound1</button>
-                <button onclick="playSound(buttonSound2)">Sound2</button>
-                <button onclick="playSound(buttonSound3)">Sound3</button>
-              </p>
+
+                <button class="paper-btn btn-primary" onclick="playSound(buttonSound1)">Sound1</button>
+
+
+                <button class="paper-btn btn-primary" onclick="playSound(buttonSound2)">Sound2</button>
+
+
+                <button class="paper-btn btn-primary" onclick="playSound(buttonSound3)">Sound3</button>
+
+
             </div>
 
             <div id="inputField" class="inputList">
-              <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)"/>
-              <button type="button" onclick="getInput()">Abschicken</button>
+              <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)" placeholder="Hier Lösung eingeben"/>
+              <button class="paper-btn btn-secondary" type="button" onclick="getInput()">Abschicken</button>
               <datalist id="dliste">
                 <!-- values werden in main.js kreiert
                 <option value="Kohlmeise">
@@ -38,35 +58,28 @@
 
 
             <div id="solutionButtonBox">
-              <p>
-                <button onclick="refresh()">Nächste<br> -->></button>
-                <button onclick="showSolution()">Lösung anzeigen</button>
-              </p>
+                  <button class="paper-btn btn-danger" id="solutionButton1" onclick="refresh()">Nächste Frage<br> -->></button>
+                  <button class="paper-btn btn-danger" id="solutionButton2" onclick="showSolution()">Lösung anzeigen</button>
             </div>
 
-      </div>
+
 
       <div id="middle-main-3">
-          <h2>
-            <p id="solutionText"></p>
-          </h2>
-          <h2 style="text-align:center;" id="birdnameGerman"></h3>
-          <h2 style="text-align:center;" id="birdnameLatin" class="italic"></h3>
+          <h2 style="text-align:center;">
+            <span id="solutionText">&nbsp;</span><br>
+
+          <span  style="font-weight: bold" id="birdnameGerman"></span><br>
+          <span  id="birdnameLatin" class="italic"></span></h2>
       </div>
 
-    <div id="right">
-       <div class="select-wrapper">
-        <label for="difficulty">Schwierigkeitsgrad:</label>
-        <select  id="difficulty" onChange="updateDiff()">
-          <option value="1">Sehr Einfach</option>
-          <option value="2">Einfach</option>
-        </select>
-      </div>
-    </div>
 
-    <div id="right"></div>
+
+
+
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="Url-List.js"></script>
+    <script src ="attribution.js"></script>
     <script src="main.js"></script>
 
   </body>

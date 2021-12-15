@@ -33,6 +33,11 @@ let diff_prev = 1;
 var buttonSound1;
 var buttonSound2;
 var buttonSound3;
+
+//used for attributing the authors of certain pictures
+var attribution_string = "";
+var birdFileTest = "";
+
 var _img = document.getElementById('img1');
 var newImg = new Image;
 
@@ -63,8 +68,29 @@ function showSolution(){
 
 	//chose a random bird picture
 	birdFileName = bird.nameLatin.replace(/ /g,"_").toLowerCase();
+
+  //just for testing:
+  //birdFileName = "cuculus_canorus"
+
 	var i = Math.floor(Math.random()*3);
+
+  //just for testing:
+  //var i = 2;
+
 	newImg.src = `/pics/${birdFileName}${i}.jpg`;
+
+  //test if image has an author that needs to be displayed
+  birdFileName += i.toString();
+  if (authors.has(birdFileName)) {
+
+    //console.log("in if birdFileName: "+birdFileName)
+    //create the string and add it to the element with the id "attribution"
+    //authors is a Map with the name of the file as index and an array of strings as value
+    // the array is structured like this [title,author,license]
+    attribution_string = "'"+ authors.get(birdFileName)[0] + "' by " + authors.get(birdFileName)[1] +
+      ", licensed under: " + authors.get(birdFileName)[2] +".";
+    document.getElementById("attribution").innerHTML = attribution_string;
+  }
 
 }
 
@@ -113,6 +139,8 @@ function refresh() {
   if (document.getElementById("solutionText")) {
     document.getElementById("solutionText").innerHTML = "";
   }
+
+  document.getElementById("attribution").innerHTML = "";
 
     //create Bird-Object - so far Bird only has the properties nameLatin and nameGerman
 	bird = new Object();
@@ -221,6 +249,8 @@ function updateAutocomplete(){
   }
 
 }
+
+
 
 
 
