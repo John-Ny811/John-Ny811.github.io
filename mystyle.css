@@ -131,6 +131,22 @@ body {
   #inputField{
 
   }
+  .btn-primary{
+
+    margin-right: 1vmin;
+  }
+
+  div#inputField select {
+    margin-right: 1vmin;
+  }
+
+  div#solutionButtonBox button{
+
+  }
+
+  #solutionButton1{
+    margin-right: 1vmin;
+  }
   div#solutionButtonBox {
 
 
@@ -304,15 +320,19 @@ body {
 
   .btn-primary{
 
-
+    margin-right: 3vmin;
   }
 
-  div#inputField button {
-
+  div#inputField select {
+    margin-right: 2vmin;
   }
 
   div#solutionButtonBox button{
 
+  }
+
+  #solutionButton1{
+    margin-right: 4vmin;
   }
 
   #solutionButton2 {
@@ -552,7 +572,7 @@ div#difficulty {
 }
 
 option {
-  
+
 }
 
 div#soundButtonBox {
