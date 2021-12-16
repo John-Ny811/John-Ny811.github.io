@@ -8,58 +8,161 @@ body {
   color: #363636;
   font-family: Arial, Helvetica, sans-serif;
   height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden; /* Fix for firefox and IE 10-11  */
+  -moz-column-count: 1;
+   column-count: 1;
 }
 
+@media all and (max-width:300px){
+
+  #top-box {
+
+  }
+
+  div#soundButtonBox{
+
+  }
+
+  #inputField{
+
+  }
+  div#solutionButtonBox {
+
+  }
+
+  #solutionButton1{
+
+  }
+
+  #solutionButton2 {
+
+  }
+
+  img#img1 {
+
+  }
+  div.image-col{
+
+  }
+
+  #attribution {
+
+  }
+
+
+
+
+  h2 {
+
+  }
+
+  .select-wrapper {
+
+  }
+
+  .btn-primary{
+
+
+  }
+
+  div#inputField button {
+
+
+  }
+
+  div#soundButtonBox {
+
+  }
+  label {
+
+  }
+  .select-wrapper {
+
+  }
+
+
+
+  div#inputField button {
+
+  }
+
+  div#inputField input {
+
+  }
+
+  div#soundButtonBox {
+
+  }
+
+
+  select {
+
+  }
+
+
+
+  select {
+
+  }
+
+
+}
+}
 
 
 @media (min-width: 300px) {
 
   #top-box {
-    height: 10%;
+
+  }
+
+  #title {
+    font-size: 5.9vw;
   }
 
   div#soundButtonBox{
-    width:100%;
+
   }
 
   #inputField{
-    width:100%;
-    flex-direction: column;
+
   }
   div#solutionButtonBox {
-    width: 100%;
-    margin-top: 10px;
+
 
   }
 
   img#img1 {
-    width: 50%;
+    max-width: 1px;
+    width:50%;
   }
   div.image-col{
-    height:25%;
-    margin-bottom:20px;
+
   }
 
   #attribution {
-    font-size:14px;
+
   }
 
   h2 {
-    font-size: 20px;
+
   }
 
   .select-wrapper {
-    font-size: 12px;
+
   }
 
   .btn-primary{
 
-    height:50%;
-    font-size: 16px;
+
   }
 
   div#inputField button {
-    font-size: 16px;
+
   }
 
   div#soundButtonBox {
@@ -70,52 +173,44 @@ body {
   }
 
   select {
-    font-size: 12px;
-    height: 20px;
+
   }
 
-  h1 {
-    font-size: 25px;
-    padding:0;
-    margin:0;
-  }
+
 }
 
 @media (min-width: 480px) {
 
 
     #top-box {
-      height: 15%;
+
     }
 
-    h1 {
-      font-size: 35px;
-    }
+
 
     .select-wrapper {
-      margin-left: auto;
-      margin-right: 0;
+
     }
 
     div#soundButtonBox{
-      width:60%;
+
     }
 
     label {
-      font-size: 12px;
+
     }
 
     div#soundbuttonBox button{
-      font-size: 60px;
+
     }
 
     div#inputField{
-      width: 60%;
+
     }
 
 
     div#solutionButtonBox {
-      width: 60%;
+
 
     }
 }
@@ -123,48 +218,43 @@ body {
 @media (min-width: 700px) {
 
   label {
-    font-size: 16px;
+
   }
+
+
   div#soundButtonBox{
-    width:50%;
+
   }
 
   div#soundbuttonBox button{
-    font-size: 50px;
+
   }
 
   div#inputField{
-    width: 50%;
-    flex-wrap: wrap;
-    flex-direction: row;
+
   }
 
 
   div#solutionButtonBox {
-    width: 50%;
+
 
   }
 
   img#img1 {
-    width: 40%;
+      max-width: 30%;
   }
 
   div.image-col{
-    height:25%;
+
   }
 
-  #title{
-    position: relative;
-    left: 10%;
-  }
+
 
   .select-wrapper {
-    float:right;
+
   }
 
-  h1 {
-    font-size: 35px;
-  }
+
 }
 
 @media (min-width: 800px) {
@@ -178,122 +268,170 @@ body {
 
 @media (min-width: 1100px) {
 
-  h1 {
-    font-size: 50px;
-  }
-
   h2 {
-    font-size:
-    35px;
+
   }
 
   label {
-    font-size: 15px;
+
   }
 
   #top-box {
-    height: 15%;
+    display: flex;
+    flex-direction: row;
   }
 
   #top-box h1{
 
   }
 
+  .select-wrapper{
+    position: fixed;
+    margin: auto;
+    right: 0;
+    top:0;
+    width: 20%;
+  }
+
+
   #title{
-    position: relative;
-    left: 10%;
+
   }
 
   div#soundButtonBox{
-    width:40%;
+
   }
 
   .btn-primary{
 
-    font-size: 24px;
+
   }
 
   div#inputField button {
-    font-size: 24px;
+
   }
 
   div#solutionButtonBox button{
-    font-size: 30px;
+
   }
 
   #solutionButton2 {
-    padding-top:26px;
+
   }
 
   div#inputField{
-    width: 40%;
-    flex-wrap: wrap;
-    flex-direction: row;
+
   }
 
 
   div#solutionButtonBox {
-    width: 40%;
-    margin-top: 30px;
+
   }
 
   img#img1 {
-    width: 30%;
+
   }
 
   div.image-col{
-    height:30%;
+
   }
 
   .select-wrapper {
-    float:right;
+
   }
 }
 
 @media (min-width: 1440px) {
 
   #top-box {
-    height: 8%;
-    text-align:center;
+
   }
 
   #title{
-    position: relative;
-    left: 5%;
+
   }
 
   div#soundButtonBox{
-    width:30%;
+
   }
 
   div#soundbuttonBox button{
-    font-size: 30px;
+
   }
 
   div#inputField{
-    width: 30%;
+
   }
 
 
   div#solutionButtonBox {
-    width: 30%;
+
 
   }
 
-  img#img1 {
-    width: 30%;
-  }
 
-  div.image-col{
-    height:40%;
-    margin-bottom:20px;
-  }
+
+
 
   #top-box h1{
-    right: 20%;
+
   }
 }
 
+
+#title h1{
+  font-size: 3.9vmin;
+
+}
+
+label{
+  font-size: 1.9vmin;
+}
+
+#difficulty{
+  font-size: 1.9vmin;
+  height: 2vmin;
+}
+
+div.image-col{
+  margin-bottom: 2vmin;
+}
+
+img#img1 {
+  max-width: 30vmin;
+}
+
+#soundButtonBox {
+
+}
+#soundButtonBox button{
+  font-size: 1.1vmin;
+
+}
+
+#textfield1 {
+  font-size: 1.1vmin;
+}
+
+#inputField button{
+  font-size: 1.1vmin;
+}
+
+#solutionButton1 {
+  font-size: 1.1vmin;
+}
+
+#solutionButton2 {
+  font-size: 1.1vmin;
+}
+
+#middle-main-3{
+
+}
+#middle-main-3 h2{
+  font-size: 3vmin;
+
+}
 
 html {
 
@@ -312,6 +450,8 @@ html {
 
 
 
+
+
 #top-box{
   overflow: hidden;
   margin-right: -0%;
@@ -327,10 +467,9 @@ html {
 
 
 .select-wrapper {
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
 
-  width: 10em;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 
@@ -382,35 +521,7 @@ select:focus::-ms-value {
 }
 
 @media all and (max-width:30em){
-  .select-wrapper {
-    font-size: 12px;
-  }
 
-  .btn-primary{
-
-    height:50%;
-    font-size: 16px;
-  }
-
-  div#inputField button {
-    font-size: 16px;
-  }
-
-  div#soundButtonBox {
-
-  }
-  .column{
-
-  }
-
-  select {
-    font-size: 12px;
-    height: 20px;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
 }
 
 
@@ -426,10 +537,11 @@ img#img1 {
 /* attribution is the line for attributing the author of certain pictures */
 #attribution {
   text-align:center;
+  font-size: 1vmin;
 }
 
 div#difficulty {
-  width: 200px;
+
 }
 
 div#soundButtonBox {
@@ -437,6 +549,8 @@ div#soundButtonBox {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
 
 }
 
@@ -458,22 +572,14 @@ div#soundButtonBox {
 
 
 div#inputField {
-  margin-top: 20px;
 
   display: flex;
-
   justify-content: space-around;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
 }
 
-div#inputField input{
 
-}
-
-
-div#inputField button{
-
-
-}
 
 
 
@@ -489,23 +595,19 @@ div#solutionButtonBox {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
 }
 
 div#solutionButtonBox button{
-  height: 100%;
+
 }
 
 
 
 #solutionButton1 {
-    padding: 4px;
+
 }
 #solutionButton2 {
   align-self: flex-end;
-}
-
-
-
-@media all and (max-width:30em){
-
 }

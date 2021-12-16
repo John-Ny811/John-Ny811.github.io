@@ -13,21 +13,24 @@
     <body>
 
         <div id="top-box">
-          <div class="select-wrapper">
-           <label for="difficulty">Schwierigkeitsgrad:</label>
-           <select  id="difficulty" onChange="updateDiff()">
-             <option value="1">Sehr Einfach</option>
-             <option value="2">Einfach</option>
-           </select>
+          <span id="title"><h1> Welcher Vogel ist hier zu hören?</h1></span>
+
          </div>
 
-         <span id="title"><h1> Welcher Vogel ist hier zu hören?</h1></span>
+         <div class="select-wrapper">
+          <label for="difficulty">Schwierigkeitsgrad:</label>
+          <select  id="difficulty" onChange="updateDiff()">
+            <option value="1">Sehr Einfach</option>
+            <option value="2">Einfach</option>
+          </select>
+
+
 
        </div>
       <div class="image-col">
-        <p>
-          <img src="/pics/placeholder.png" width="500" id="img1" alt="Welcher Vogel ist hier zu hören?"></img>
-        </p>
+
+          <img src="/pics/placeholder.png" id="img1" alt="Welcher Vogel ist hier zu hören?"></img>
+
         <p id="attribution"></p>
 
       </div>
