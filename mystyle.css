@@ -11,7 +11,7 @@ body {
   display:flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   overflow: hidden; /* Fix for firefox and IE 10-11  */
   -moz-column-count: 1;
    column-count: 1;
