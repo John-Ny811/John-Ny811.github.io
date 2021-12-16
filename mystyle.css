@@ -390,7 +390,11 @@ label{
 
 #difficulty{
   font-size: 1.9vmin;
-  height: 2vmin;
+  height: 5vmin;
+}
+
+::placeholder {
+  color: black;
 }
 
 div.image-col{
@@ -509,8 +513,10 @@ select {
 }
 
 select option {
-  color: #000;
+
 }
+
+
 
 select::-ms-expand {
   display: none;
@@ -542,6 +548,11 @@ img#img1 {
 
 div#difficulty {
 
+
+}
+
+option {
+  
 }
 
 div#soundButtonBox {
