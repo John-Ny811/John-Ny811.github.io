@@ -398,31 +398,31 @@ div.image-col{
 }
 
 img#img1 {
-  max-width: 30vmin;
+  max-width: 40vmin;
 }
 
 #soundButtonBox {
 
 }
 #soundButtonBox button{
-  font-size: 1.1vmin;
+  font-size: 2.1vmin;
 
 }
 
 #textfield1 {
-  font-size: 1.1vmin;
+  font-size: 2.1vmin;
 }
 
 #inputField button{
-  font-size: 1.1vmin;
+  font-size: 2.1vmin;
 }
 
 #solutionButton1 {
-  font-size: 1.1vmin;
+  font-size: 2.1vmin;
 }
 
 #solutionButton2 {
-  font-size: 1.1vmin;
+  font-size: 2.1vmin;
 }
 
 #middle-main-3{
