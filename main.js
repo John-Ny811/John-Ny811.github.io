@@ -63,8 +63,8 @@ function playSound(a_button) {
 function showSolution(){
 
 	//display the name of the chosen bird in German and Latin
-	document.getElementById("birdnameGerman").innerHTML = bird.nameGerman;
-	document.getElementById("birdnameLatin").innerHTML = bird.nameLatin;
+	document.getElementById("birdnameGerman").innerHTML = bird.nameGerman + " ("+bird.nameLatin+")";
+	
 
 	//chose a random bird picture
 	birdFileName = bird.nameLatin.replace(/ /g,"_").toLowerCase();

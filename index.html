@@ -12,27 +12,32 @@
     </head>
     <body>
 
-        <div id="top-box">
-          <span id="title"><h1>Welcher Vogel ist hier zu hören?</h1></span>
 
-         </div>
+          <div class="row flex-right">
 
-         <div class="select-wrapper">
+            <div class="sm-4 col">
+              <span id="title"><h1>Welcher Vogel ist hier zu hören?</h1></span>
+            </div>
+            <div class="sm-4 col">
+              <div class="select-wrapper">
+                <select  id="difficulty" onChange="updateDiff()" style="color:#606060">
+                  <option disabled="disabled" selected="selected">Schwierigkeitsgrad</option>
 
-          <select  id="difficulty" onChange="updateDiff()" style="color:#606060">
-            <option disabled="disabled" selected="selected">Schwierigkeitsgrad</option>
+                  <option value="1" style="color:black;">
+                    Sehr Einfach
+                  </option>
+                  <option value="2" style="color:black;">
+                    Einfach
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
 
-            <option value="1" style="color:black;">
-              Sehr Einfach
-            </option>
-            <option value="2" style="color:black;">
-              Einfach
-            </option>
-          </select>
-
-
-
-       </div>
+     </div>
+     <div class="row">
+       <div class="col-3 col"></div>
+       <div class="col-6 col">
       <div class="image-col">
 
           <img src="/pics/placeholder.png" id="img1" alt="Welcher Vogel ist hier zu hören?"></img>
@@ -40,28 +45,45 @@
         <p id="attribution"></p>
 
       </div>
+    </div>
+    <div class="col-3 col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-2 col"></div>
+    <div class="col-8 col">
 
 
-            <div id="soundButtonBox">
+          <div id="soundButtonBox">
 
                 <button class="paper-btn btn-primary" onclick="playSound(buttonSound1)">Sound1</button>
-
-
                 <button class="paper-btn btn-primary" onclick="playSound(buttonSound2)">Sound2</button>
-
-
                 <button class="paper-btn btn-primary" onclick="playSound(buttonSound3)">Sound3</button>
-
-
             </div>
+
+      <div class="col-2 col"></div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-2 col"></div>
+      <div class="col-8 col">
+
 
             <div id="solutionButtonBox">
                   <button class="paper-btn btn-danger" id="solutionButton1" onclick="refresh()">Nächste Frage<br> -->></button>
                   <button class="paper-btn btn-danger" id="solutionButton2" onclick="showSolution()">Lösung anzeigen</button>
             </div>
 
+        <div class="col-2 col"></div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-2 col"></div>
+        <div class="col-8 col">
+
             <div id="inputField" class="inputList">
               <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)" placeholder="Hier Lösung eingeben"/>
+
               <button class="paper-btn btn-secondary" type="button" onclick="getInput()">Abschicken</button>
               <datalist id="dliste">
                 <!-- values werden in main.js kreiert
@@ -69,6 +91,10 @@
                 ...-->
             	</datalist>
             </div>
+          </div>
+
+      <div class="col-2 col"></div>
+    </div>
 
 
 
@@ -76,11 +102,11 @@
 
 
       <div id="middle-main-3">
-          <h2 style="text-align:center;">
-            <span id="solutionText">&nbsp;</span><br>
+          <div style="text-align:center;">
+            <p id="solutionText">&nbsp;</p>
 
-          <span  style="font-weight: bold" id="birdnameGerman"></span><br>
-          <span  id="birdnameLatin" class="italic"></span></h2>
+          <p  style="font-weight: bold" id="birdnameGerman"></p><br>
+
       </div>
 
 

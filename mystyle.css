@@ -8,13 +8,8 @@ body {
   color: #363636;
   font-family: Arial, Helvetica, sans-serif;
   height:100%;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow: hidden; /* Fix for firefox and IE 10-11  */
-  -moz-column-count: 1;
-   column-count: 1;
+
+
 }
 
 @media all and (max-width:300px){
@@ -43,7 +38,8 @@ body {
   }
 
   img#img1 {
-
+    max-height:100%;
+    max-width: 100%
   }
   div.image-col{
 
@@ -87,7 +83,7 @@ body {
 
 
   div#inputField button {
-
+    margin: 0;
   }
 
   div#inputField input {
@@ -111,178 +107,122 @@ body {
 
 
 }
-}
 
 
-@media (min-width: 300px) {
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+
+  .select-wrapper{
+
+    width: 50%;
+
+  }
+  .btn-primary{
+    font-size: 2.1vmin;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+  }
+
+
+  .image-col{
+    max-height:20vmin;
+    height: 100%;
+    margin-bottom: 3.5vmin;
+  }
+  img#img1 {
+    max-height:100%;
+    max-width: 100%
+  }
 
   #top-box {
 
-  }
-
-  #title {
-    font-size: 5.9vw;
-  }
-
-  div#soundButtonBox{
-
-  }
-
-  #inputField{
-
-  }
-  .btn-primary{
-
-    margin-right: 1vmin;
-  }
-
-  div#inputField select {
-    margin-right: 1vmin;
-  }
-
-  div#solutionButtonBox button{
-
-  }
-
-  #solutionButton1{
-    margin-right: 1vmin;
-  }
-  div#solutionButtonBox {
 
 
   }
 
-  img#img1 {
-    max-width: 1px;
-    width:50%;
-  }
-  div.image-col{
-
+  h1{
+    font-size: 4vmin;;
   }
 
-  #attribution {
-
+  h2{
+    font-size: 3vmin;
   }
 
-  h2 {
+  .sm-4 {
 
   }
 
-  .select-wrapper {
+  soundButtonBox {
 
   }
 
-  .btn-primary{
 
 
-  }
-
-  div#inputField button {
+  inputField {
 
   }
 
-  div#soundButtonBox {
+
+  #inputField input{
+    font-size: 2.1vmin;
 
   }
-  .column{
+  #inputField button{
+    font-size: 2.1vmin;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 8px;
+
+  }
+  solutionButtonBox {
 
   }
 
-  select {
-
+  #solutionButton1, #solutionButton2 {
+    font-size: 2vmin;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
   }
-
 
 }
 
-@media (min-width: 480px) {
-
-
-    #top-box {
-
-    }
 
 
 
-    .select-wrapper {
-
-    }
-
-    div#soundButtonBox{
-
-    }
-
-    label {
-
-    }
-
-    div#soundbuttonBox button{
-
-    }
-
-    div#inputField{
-
-    }
+/*****************************************************/
 
 
-    div#solutionButtonBox {
+@media only screen and (min-width: 1000px) {
 
-
-    }
-}
-
-@media (min-width: 700px) {
-
-  label {
+  #soundButtonBox button{
+    font-size: 2.5vmin;
 
   }
 
-
-  div#soundButtonBox{
-
+  #textfield1 {
+    font-size: 2.5vmin;
   }
 
-  div#soundbuttonBox button{
-
+  #inputField button{
+    font-size: 2.5vmin;
   }
 
-  div#inputField{
-
+  #solutionButton1 {
+    font-size: 2.5vmin;
   }
 
-
-  div#solutionButtonBox {
-
-
+  #solutionButton2 {
+    font-size: 2.5vmin;
   }
 
-  img#img1 {
-      max-width: 30%;
-  }
-
-  div.image-col{
+  #middle-main-3{
 
   }
-
-
-
-  .select-wrapper {
+  #middle-main-3 h2{
+    font-size: 3vmin;
 
   }
-
-
-}
-
-@media (min-width: 800px) {
-
-
-}
-
-@media (min-width: 960px) {
-
-}
-
-@media (min-width: 1100px) {
 
   h2 {
 
@@ -292,21 +232,20 @@ body {
 
   }
 
-  #top-box {
-    display: flex;
-    flex-direction: row;
+  .row.flex-right{
+    margin-bottom: -20px;
   }
 
-  #top-box h1{
+  h1{
+    font-size:40px;
 
   }
 
   .select-wrapper{
-    position: fixed;
-    margin: auto;
-    right: 0;
-    top:0;
-    width: 20%;
+    position: relative;
+    margin-right: 0;
+    width: 50%;
+    margin-left: auto;
   }
 
 
@@ -324,7 +263,7 @@ body {
   }
 
   div#inputField select {
-    margin-right: 2vmin;
+
   }
 
   div#solutionButtonBox button{
@@ -348,12 +287,23 @@ body {
 
   }
 
+  #inputField button{
+    margin-left: 2vmin;
+  }
+
   img#img1 {
 
   }
 
-  div.image-col{
+  .image-col{
+    max-height:30vmin;
+    height: 100%;
+    margin-bottom: 3.5vmin;
 
+  }
+  img#img1 {
+    max-height:100%;
+    max-width: 100%
   }
 
   .select-wrapper {
@@ -381,81 +331,28 @@ body {
 
   div#inputField{
 
+
   }
+
+  #textfield1 {
+    width: 35vmin;
+    padding: 1vmin 0 1vmin 0;
+  }
+
+
+
 
 
   div#solutionButtonBox {
-
-
   }
-
-
-
-
 
   #top-box h1{
 
   }
 }
 
+/**************************/
 
-#title h1{
-  font-size: 3.9vmin;
-
-}
-
-label{
-  font-size: 1.9vmin;
-}
-
-#difficulty{
-  font-size: 1.9vmin;
-  height: 5vmin;
-}
-
-::placeholder {
-  color: black;
-}
-
-div.image-col{
-  margin-bottom: 2vmin;
-}
-
-img#img1 {
-  max-width: 40vmin;
-}
-
-#soundButtonBox {
-
-}
-#soundButtonBox button{
-  font-size: 2.1vmin;
-
-}
-
-#textfield1 {
-  font-size: 2.1vmin;
-}
-
-#inputField button{
-  font-size: 2.1vmin;
-}
-
-#solutionButton1 {
-  font-size: 2.1vmin;
-}
-
-#solutionButton2 {
-  font-size: 2.1vmin;
-}
-
-#middle-main-3{
-
-}
-#middle-main-3 h2{
-  font-size: 3vmin;
-
-}
 
 html {
 
@@ -471,6 +368,7 @@ html {
 .italic {
   font-style: italic;
 }
+
 
 
 
@@ -536,7 +434,9 @@ select option {
 
 }
 
-
+p {
+  font-size: 3vmin;
+}
 
 select::-ms-expand {
   display: none;
@@ -546,9 +446,6 @@ select:focus::-ms-value {
   background-color: transparent;
 }
 
-@media all and (max-width:30em){
-
-}
 
 
 
@@ -563,7 +460,7 @@ img#img1 {
 /* attribution is the line for attributing the author of certain pictures */
 #attribution {
   text-align:center;
-  font-size: 1vmin;
+  font-size: 2vmin;
 }
 
 div#difficulty {
@@ -577,12 +474,15 @@ option {
 
 div#soundButtonBox {
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
   margin-top: 1vmin;
   margin-bottom: 1vmin;
 
+}
+
+#textfield1 {
+
+  padding: 1vmin 0 1vmin 0;
 }
 
 
@@ -590,7 +490,35 @@ div#soundButtonBox {
 
 }
 
+.col-8 {
+  padding: 0 0 0 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 
+.col-2 {
+  padding: 0 0 0 0;
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+.sm-4 {
+  padding: 0 0 0 0;
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+.col-6 {
+  padding: 0 0 0 0;
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+.row {
+  margin-bottom: 0.5vmin;
+}
 
 
 @media all and (max-width:30em){
@@ -605,27 +533,19 @@ div#soundButtonBox {
 div#inputField {
 
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   margin-top: 1vmin;
   margin-bottom: 1vmin;
+
+
 }
 
 
 
-
-
-@media all and (max-width:30em){
-  div#inputField button{
-  display:block;
-  margin:0.2em auto;
- }
-}
 
 div#solutionButtonBox {
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   margin-top: 1vmin;
   margin-bottom: 1vmin;
 }
@@ -634,11 +554,11 @@ div#solutionButtonBox button{
 
 }
 
-
+#middle-main
 
 #solutionButton1 {
 
 }
 #solutionButton2 {
-  align-self: flex-end;
+
 }
