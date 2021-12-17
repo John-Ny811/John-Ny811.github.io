@@ -64,7 +64,7 @@ function showSolution(){
 
 	//display the name of the chosen bird in German and Latin
 	document.getElementById("birdnameGerman").innerHTML = bird.nameGerman + " ("+bird.nameLatin+")";
-	
+
 
 	//chose a random bird picture
 	birdFileName = bird.nameLatin.replace(/ /g,"_").toLowerCase();
@@ -113,8 +113,6 @@ function refresh() {
 
   updateDiff();
 
-
-
 	//stop any sound that is playing - it is wrapped in an if-clause so that there is no referenceError when refresh is loaded on startup
 	if (buttonSound1 && buttonSound2 && buttonSound3){
 	  stopSound(buttonSound1);
@@ -124,11 +122,10 @@ function refresh() {
 
     //set all the solution fields to an empty String again
 
-    if (document.getElementById("birdnameGerman") && document.getElementById("birdnameLatin")) {
+  if (document.getElementById("birdnameGerman")) {
 
-    	document.getElementById("birdnameGerman").innerHTML = "";
-		document.getElementById("birdnameLatin").innerHTML = "";
-
+    document.getElementById("birdnameGerman").innerHTML = "";
+    
 	}
 
 

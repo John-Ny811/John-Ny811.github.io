@@ -113,19 +113,19 @@ body {
 
   .select-wrapper{
 
-    width: 50%;
+    width: 40%;
 
   }
   .btn-primary{
-    font-size: 2.1vmin;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 3.1vmin;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: auto;
   }
 
 
   .image-col{
-    max-height:20vmin;
+    max-height:30vmin;
     height: 100%;
     margin-bottom: 3.5vmin;
   }
@@ -164,13 +164,13 @@ body {
 
 
   #inputField input{
-    font-size: 2.1vmin;
+    font-size: 3.1vmin;
 
   }
   #inputField button{
-    font-size: 2.1vmin;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 3.1vmin;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 8px;
 
   }
@@ -179,9 +179,9 @@ body {
   }
 
   #solutionButton1, #solutionButton2 {
-    font-size: 2vmin;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 3vmin;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: auto;
   }
 
