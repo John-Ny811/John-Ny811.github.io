@@ -13,15 +13,21 @@
     <body>
 
         <div id="top-box">
-          <span id="title"><h1> Welcher Vogel ist hier zu hören?</h1></span>
+          <span id="title"><h1>Welcher Vogel ist hier zu hören?</h1></span>
 
          </div>
 
          <div class="select-wrapper">
-          <label for="difficulty">Schwierigkeitsgrad:</label>
-          <select  id="difficulty" onChange="updateDiff()">
-            <option value="1">Sehr Einfach</option>
-            <option value="2">Einfach</option>
+
+          <select  id="difficulty" onChange="updateDiff()" style="color:#606060">
+            <option disabled="disabled" selected="selected">Schwierigkeitsgrad</option>
+
+            <option value="1" style="color:black;">
+              Sehr Einfach
+            </option>
+            <option value="2" style="color:black;">
+              Einfach
+            </option>
           </select>
 
 
@@ -49,6 +55,11 @@
 
             </div>
 
+            <div id="solutionButtonBox">
+                  <button class="paper-btn btn-danger" id="solutionButton1" onclick="refresh()">Nächste Frage<br> -->></button>
+                  <button class="paper-btn btn-danger" id="solutionButton2" onclick="showSolution()">Lösung anzeigen</button>
+            </div>
+
             <div id="inputField" class="inputList">
               <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)" placeholder="Hier Lösung eingeben"/>
               <button class="paper-btn btn-secondary" type="button" onclick="getInput()">Abschicken</button>
@@ -60,10 +71,7 @@
             </div>
 
 
-            <div id="solutionButtonBox">
-                  <button class="paper-btn btn-danger" id="solutionButton1" onclick="refresh()">Nächste Frage<br> -->></button>
-                  <button class="paper-btn btn-danger" id="solutionButton2" onclick="showSolution()">Lösung anzeigen</button>
-            </div>
+
 
 
 
