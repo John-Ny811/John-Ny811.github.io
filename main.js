@@ -41,6 +41,9 @@ var birdFileTest = "";
 var _img = document.getElementById('img1');
 var newImg = new Image;
 
+window.isMobile = /iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase());
+
+
 //refresh is the main-function and gets called when page is loaded and after user makes a guess or wants to see the next question
 window.onload = refresh();
 
@@ -136,8 +139,11 @@ function refresh() {
 
   document.getElementById("attribution").innerHTML = "";
 
-  //set focus to input field so user can immediatly start typing again
-  document.getElementById("textfield1").focus();
+  //set focus to input field so user can immediatly start typing again but only if it is not on mobile
+  if( !(/iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent)) ) {
+      document.getElementById("textfield1").focus();
+  }
+
 
   //create Bird-Object - so far Bird only has the properties nameLatin and nameGerman
 	bird = new Object();
@@ -247,18 +253,6 @@ function updateAutocomplete(){
 
 }
 
-jQuery(document).ready(function() {
-var viewportWidth = jQuery(window).width();
-
-    jQuery(window).resize(function(){
-        var viewportWidthResized = jQuery(window).width();
-
-        if (viewportWidth !== viewportWidthResized) {
-            // do the work
-            viewportWidth = viewportWidthResized;
-        }
-    });
-});
 
 
 
@@ -279,14 +273,9 @@ var viewportWidth = jQuery(window).width();
     	let string_mod = val['file'];
     	string_mod = string_mod.replace('//', "'https://");
     	string_mod = string_mod.replace('download', "download',");
-
-
     	$("p").append(string_mod);
     	$("p").append("<br>");
-
-
     	var Beispiel = val["file-name"];
-
     	});
     });
 */
