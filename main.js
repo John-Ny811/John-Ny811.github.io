@@ -123,11 +123,8 @@ function refresh() {
     //set all the solution fields to an empty String again
 
   if (document.getElementById("birdnameGerman")) {
-
     document.getElementById("birdnameGerman").innerHTML = "";
-    
 	}
-
 
 	if (document.getElementById("textfield1")) {
 		document.getElementById("textfield1").value ="";
@@ -139,7 +136,10 @@ function refresh() {
 
   document.getElementById("attribution").innerHTML = "";
 
-    //create Bird-Object - so far Bird only has the properties nameLatin and nameGerman
+  //set focus to input field so user can immediatly start typing again
+  document.getElementById("textfield1").focus();
+
+  //create Bird-Object - so far Bird only has the properties nameLatin and nameGerman
 	bird = new Object();
 
 	//chose a random Bird from ListOfBirds

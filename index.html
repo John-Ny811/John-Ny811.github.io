@@ -70,8 +70,8 @@
 
 
             <div id="solutionButtonBox">
-                  <button class="paper-btn btn-danger" id="solutionButton1" onclick="refresh()">Nächste Frage<br> -->></button>
-                  <button class="paper-btn btn-danger" id="solutionButton2" onclick="showSolution()">Lösung anzeigen</button>
+                  <button class="paper-btn" id="solutionButton1" onclick="refresh()">Nächste Frage<br> -->></button>
+                  <button class="paper-btn" id="solutionButton2" onclick="showSolution()">Lösung anzeigen</button>
             </div>
 
         <div class="col-2 col"></div>
@@ -82,7 +82,7 @@
         <div class="col-8 col">
 
             <div id="inputField" class="inputList">
-              <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)" placeholder="Hier Lösung eingeben"/>
+              <input type="text" list="dliste" id="textfield1" value="" onkeydown="search(this)" placeholder="Hier Lösung eingeben"/ autofocus>
 
               <button class="paper-btn btn-secondary" type="button" onclick="getInput()">Abschicken</button>
               <datalist id="dliste">
@@ -96,23 +96,11 @@
       <div class="col-2 col"></div>
     </div>
 
-
-
-
-
-
       <div id="middle-main-3">
           <div style="text-align:center;">
             <p id="solutionText">&nbsp;</p>
-
           <p  style="font-weight: bold" id="birdnameGerman"></p><br>
-
       </div>
-
-
-
-
-
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="Url-List.js"></script>

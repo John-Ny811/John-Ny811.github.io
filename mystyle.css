@@ -5,6 +5,7 @@
 
 body {
   background-color: rgb(226, 245, 181);
+
   color: #363636;
   font-family: Arial, Helvetica, sans-serif;
   height:100%;
@@ -152,6 +153,11 @@ body {
 
   }
 
+  #difficulty{
+    font-size: 70%;
+    height: 5%;
+  }
+
   soundButtonBox {
 
   }
@@ -194,6 +200,10 @@ body {
 
 
 @media only screen and (min-width: 1000px) {
+
+  #difficulty{
+    font-size: 2.1vmin;
+  }
 
   #soundButtonBox button{
     font-size: 2.5vmin;
