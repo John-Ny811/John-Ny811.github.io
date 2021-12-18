@@ -482,8 +482,23 @@ option {
 
 }
 
-div#soundButtonBox {
+.sm-4 {
+  display:flex;
+  justify-content: center;
+}
 
+.image-col {
+  display:flex;
+  justify-content: center;
+}
+
+div#solutionButtonBox {
+  display:flex;
+  justify-content: center;
+}
+div#soundButtonBox {
+  display:flex;
+  justify-content: center;
 
   margin-top: 1vmin;
   margin-bottom: 1vmin;

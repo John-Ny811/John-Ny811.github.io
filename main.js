@@ -41,11 +41,10 @@ var birdFileTest = "";
 var _img = document.getElementById('img1');
 var newImg = new Image;
 
-window.isMobile = /iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase());
-
 
 //refresh is the main-function and gets called when page is loaded and after user makes a guess or wants to see the next question
 window.onload = refresh();
+
 
 //stopSound takes a button as an input and stops the sound of this button
 function stopSound(a_button) {
@@ -140,7 +139,7 @@ function refresh() {
   document.getElementById("attribution").innerHTML = "";
 
   //set focus to input field so user can immediatly start typing again but only if it is not on mobile
-  if( !(/iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent)) ) {
+  if( !(/iphone|ipod|ipad|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) ) {
       document.getElementById("textfield1").focus();
   }
 
@@ -237,6 +236,7 @@ function updateDiff() {
 
 function updateAutocomplete(){
 
+
   //updating the autocomplete-textfield1
   var dList = document.getElementById("dliste");
   //remove all elements from autocomplete-textfield1
@@ -250,6 +250,8 @@ function updateAutocomplete(){
     dList.appendChild(opt);
     console.log("appended: "+opt.value)
   }
+
+
 
 }
 
