@@ -228,31 +228,37 @@ body {
   }
 
   #soundButtonBox button{
-    font-size: 2.5vmin;
+    font-size: 2.9vmin;
 
   }
 
   #textfield1 {
-    font-size: 2.5vmin;
+    font-size: 2.9vmin;
   }
 
   #inputField button{
-    font-size: 2.5vmin;
+    font-size: 2.9vmin;
+  }
+
+  #inputField input{
+    font-size: 2.9vmin;
+    max-width: 33vmin;
+    padding-left: 1vmin;
   }
 
   #solutionButton1 {
-    font-size: 2.5vmin;
+    font-size: 2.9vmin;
   }
 
   #solutionButton2 {
-    font-size: 2.5vmin;
+    font-size: 2.9vmin;
   }
 
   #middle-main-3{
 
   }
   #middle-main-3 h2{
-    font-size: 3vmin;
+    font-size: 3.5vmin;
 
   }
 
@@ -269,7 +275,7 @@ body {
   }
 
   h1{
-    font-size:40px;
+    font-size:43px;
 
   }
 
@@ -291,7 +297,7 @@ body {
 
   .btn-primary{
 
-    margin-right: 3vmin;
+    margin-right: 2vmin;
   }
 
   div#inputField select {
@@ -518,6 +524,8 @@ div#solutionButtonBox {
   display:flex;
   justify-content: center;
 }
+
+
 div#soundButtonBox {
   display:flex;
   justify-content: center;
@@ -584,6 +592,7 @@ div#inputField {
   justify-content: center;
   margin-top: 1vmin;
   margin-bottom: 1vmin;
+  flex-wrap: wrap;
 
 
 }

@@ -5,18 +5,32 @@ let ListOfBirds = [parus_major,passer_domesticus,cyanistes_caeruleus,passer_mont
 
 
 //used when changing difficulty from 2 back to 1
-let ListOfBirds_original = [...ListOfBirds]
+let ListOfBirds_original = [...ListOfBirds];
 
-let ListOfBirdsMiddle = [dendrocopos_major, garrulus_glandarius, sylvia_borin, pyrrhula_pyrrhula, sitta_europaea,
-  cuculus_canorus, delichon_urbicum, apus_apus, streptopelia_decaocto, carduelis_carduelis]
+let ListOfBirdsEasy = [dendrocopos_major, garrulus_glandarius, sylvia_borin, pyrrhula_pyrrhula, sitta_europaea,
+  cuculus_canorus, delichon_urbicum, apus_apus, streptopelia_decaocto, carduelis_carduelis];
 
-let BirdNamesLatin = ["Parus Major","Passer Domesticus","Cyanistes Caeruleus", "Passer Montanus","Turdus Merula",
- "Pica Pica","Fringilla Coelebs","Chloris Chloris","Corvus Corone","Columba Palumbus", "Dendrocopos Major",
- "Garrulus Glandarius", "Sylvia Borin", "Pyrrhula Pyrrhula", "Sitta Europaea", "Cuculus Canorus", "Delichon Urbicum",
- "Apus Apus", "Streptopelia Decaocto", "Carduelis Carduelis"];
 
-let BirdNamesGerman = ["Kohlmeise","Haussperling","Blaumeise", "Feldsperling","Amsel", "Elster","Buchfink","Grünfink","Rabenkrähe","Ringeltaube",
-"Buntspecht", "Eichelhäher", "Gartengrasmücke", "Gimpel", "Kleiber", "Kuckuck", "Mehlschwalbe", "Mauersegler", "Türkentaube", "Stieglitz"];
+//Hinweis: bei Xenocanto heißt die Dohle nicht Corvus monedula sondern Coloeus monedula ->
+//ich folge hier der Benennung durch Xenocanto
+let ListOfBirdsMiddle = [columba_livia, phoenicurus_ochruros,
+coloeus_monedula, phoenicurus_phoenicurus, sylvia_atricapilla, motacilla_alba, prunella_modularis,
+corvus_frugilegus, anas_platyrhynchos, buteo_buteo]
+
+
+
+let BirdNamesLatin = ["Parus major","Passer domesticus","Cyanistes caeruleus", "Passer montanus","Turdus merula",
+ "Pica pica","Fringilla coelebs","Chloris chloris","Corvus corone","Columba palumbus", "Dendrocopos major",
+ "Garrulus glandarius", "Sylvia borin", "Pyrrhula pyrrhula", "Sitta europaea", "Cuculus canorus", "Delichon urbicum",
+ "Apus apus", "Streptopelia decaocto", "Carduelis carduelis", "Columba livia", "Phoenicurus ochruros",
+ "Corvus monedula", "Phoenicurus phoenicurus", "Sylvia atricapilla", "Motacilla alba", "Prunella modularis",
+ "Corvus frugilegus", "Anas platyrhynchos", "Buteo buteo"];
+
+let BirdNamesGerman = ["Kohlmeise","Haussperling","Blaumeise", "Feldsperling","Amsel", "Elster","Buchfink","Grünfink",
+  "Rabenkrähe","Ringeltaube","Buntspecht", "Eichelhäher", "Gartengrasmücke", "Gimpel", "Kleiber", "Kuckuck",
+  "Mehlschwalbe", "Mauersegler", "Türkentaube", "Stieglitz", "Straßentaube", "Hausrotschwanz", "Dohle",
+  "Gartenrotschwanz", "Mönchsgrasmücke", "Bachstelze", "Heckenbraunelle", "Saatkrähe", "Stockente",
+  "Mäusebussard"];
 
 //MatchBirdNames ist ein Map wo jedem Lateinischen Namen die deutsche Entsprechung zugeordnet wird
 let MatchBirdNames = new Map();
@@ -206,6 +220,18 @@ function updateDiff() {
   console.log("difficulty value "+ diff)
   console.log("previous diff "+diff_prev)
 
+  if (diff == 3){
+
+    if (diff_prev == diff) {
+      return;
+    }
+    console.log("old length: " + ListOfBirds.length)
+    ListOfBirds = [...ListOfBirds_original];
+    ListOfBirds = ListOfBirds.concat(ListOfBirdsEasy).concat(ListOfBirdsMiddle);
+    console.log("new List :" + ListOfBirds.length)
+    diff_prev = diff;
+  }
+
   if (diff == 2){
 
     if (diff_prev == diff) {
@@ -213,7 +239,7 @@ function updateDiff() {
     }
     console.log("old length: " + ListOfBirds.length)
 
-    ListOfBirds = ListOfBirds.concat(ListOfBirdsMiddle)
+    ListOfBirds = ListOfBirds.concat(ListOfBirdsEasy)
     console.log("new List :" + ListOfBirds.length)
     diff_prev = diff;
   }
