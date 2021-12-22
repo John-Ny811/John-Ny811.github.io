@@ -275,7 +275,8 @@ body {
   }
 
   h1{
-    font-size:43px;
+    margin-top: 0vmin;
+    font-size:50px;
 
   }
 
@@ -287,8 +288,9 @@ body {
   }
 
 
-  #title{
-
+  #title h1{
+    margin-top: 0vmin;
+    font-size:40px;
   }
 
   div#soundButtonBox{
@@ -499,6 +501,7 @@ img#img1 {
 #attribution {
   text-align:center;
   font-size: 2vmin;
+  margin: 1vmin 0vmin 0vmin 0vmin;
 }
 
 div#difficulty {
@@ -516,8 +519,11 @@ option {
 }
 
 .image-col {
-  display:flex;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: center;
 }
 
 div#solutionButtonBox {
@@ -565,14 +571,16 @@ div#soundButtonBox {
 
 }
 .col-6 {
-  padding: 0 0 0 0;
+  padding: 5vmin 0vmin 0vmin 0vmin;
   margin-bottom: 0;
   margin-top: 0;
+
 
 }
 
 .row {
   margin-bottom: 0.5vmin;
+
 }
 
 
