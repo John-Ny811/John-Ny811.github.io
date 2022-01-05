@@ -1,6 +1,5 @@
-# John-Ny811.github.io
-BirdQuiz
+#BirdQuiz
 
-Eine Website um Vogelstimmen erkennen zu lernen.
+A website to learn to recognize bird calls.
 
-Live-Demo: selador.eu
+Live-Demo: [John-Ny811.github.io]
