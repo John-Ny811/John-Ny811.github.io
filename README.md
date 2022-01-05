@@ -1,4 +1,4 @@
-#BirdQuiz
+# BirdQuiz
 
 A website to learn to recognize bird calls.
 
